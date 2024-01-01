@@ -757,7 +757,7 @@ CNBC,http://198.16.100.90:8278/cnbc_twn/playlist.m3u8?tid=MA5A9732497897324978&c
 铁齿铜牙纪晓岚I 第三十九集,https://txmov2.a.kwimgs.com/bs3/video-hls/5224457108637573625_hlshd15.m3u8
 铁齿铜牙纪晓岚I 第四十集,https://txmov2.a.kwimgs.com/bs3/video-hls/5257671154675984197_hlshd15.m3u8
 
-_9527,#genre#
+达人源,#genre#
 田螺艳鬼,https://v5.jindangao.com/oo/o7/5/hls/index.m3u8
 中间申太长,https://v5.jindangao.com/hh/h10/34/hls/index.m3u8
 小姐姐拍片,https://v5.jindangao.com/kk/k9/16/hls/index.m3u8
