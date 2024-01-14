@@ -165,7 +165,7 @@ http://321257.cn:8888/udp/238.1.78.97:6648
 http://321257.cn:8888/udp/238.1.78.82:6528
 #EXTINF:-1,tvg-id="金鹰卡通" tvg-name="金鹰卡通" tvg-logo="https://epg.112114.xyz/logo/金鹰卡通.png" group-title="IPV4",金鹰卡通
 http://321257.cn:8888/udp/238.1.78.100:6672
-#EXTINF:-1,tvg-id="山东教育" tvg-name="山东教育" tvg-logo="https://epg.112114.xyz/logo/山东教育.png" group-title="山东",山东教育
+#EXTINF:-1,tvg-id="山东教育" tvg-name="山东教育" tvg-logo="https://epg.112114.xyz/logo/山东教育.png" group-title="IPV4",山东教育
 http://321257.cn:8888/udp/238.1.78.254:7904
 #EXTINF:-1,tvg-id="财富天下" tvg-name="财富天下" tvg-logo="https://epg.112114.xyz/logo/财富天下.png" group-title="IPV4",财富天下
 http://321257.cn:8888/udp/238.1.78.25:6128
