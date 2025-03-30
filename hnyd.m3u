@@ -61,6 +61,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226910/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226975/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" group-title="卫视",北京卫视
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227014/1.m3u8?fmt=ts2hls
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视" group-title="卫视",北京卫视4K
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226677/1.m3u8
 #EXTINF:-1 tvg-id="大象功夫" tvg-name="大象功夫" group-title="其他",大象功夫
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226962/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="国学" tvg-name="国学" group-title="其他",大象国学
@@ -97,7 +99,7 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226911/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226940/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="河南公共" tvg-name="河南公共" group-title="河南",河南公共
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226946/1.m3u8?fmt=ts2hls
-#EXTINF:-1 tvg-id="河南戏曲" tvg-name="河南戏曲" group-title="河南",河南戏曲
+#EXTINF:-1 tvg-id="河南梨园" tvg-name="河南梨园" group-title="河南",河南梨园
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226438/1.m3u8
 #EXTINF:-1 tvg-id="河南民生" tvg-name="河南民生" group-title="河南",河南民生
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226913/1.m3u8?fmt=ts2hls
