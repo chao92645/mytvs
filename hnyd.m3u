@@ -41,8 +41,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226716/1.m3u8
 #EXTINF:-1 group-title="其他",中国教育1
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8
-#EXTINF:-1 group-title="其他",求索记录
-http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226114/1.m3u8
+#EXTINF:-1 group-title="其他",求索记录4K
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227381/1.m3u8
 #EXTINF:-1 tvg-id="SiTV东方财经" tvg-name="SiTV东方财经" group-title="其他",SiTV东方财经
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226843/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="动漫秀场" tvg-name="动漫秀场" group-title="其他",SiTV动漫秀场
@@ -167,6 +167,10 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226420/1.m3u8
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226397/1.m3u8
 #EXTINF:-1 group-title="地方台",安阳新闻综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226386/1.m3u8
+#EXTINF:-1 group-title="地方台",淇县电视台
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227061/1.m3u8
+#EXTINF:-1 group-title="地方台",长垣综合频道
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227313/1.m3u8
 #EXTINF:-1 group-title="地方台",登封综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226497/1.m3u8
 #EXTINF:-1 group-title="地方台",调解剧场
@@ -187,6 +191,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226604/1.m3u8
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226515/1.m3u8
 #EXTINF:-1 group-title="地方台",开封新闻综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226398/1.m3u8
+#EXTINF:-1 group-title="地方台",林州新闻综合
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227384/1.m3u8
 #EXTINF:-1 group-title="地方台",洛阳科教
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226554/1.m3u8
 #EXTINF:-1 group-title="地方台",洛阳文旅
@@ -209,6 +215,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226664/1.m3u8
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226378/1.m3u8
 #EXTINF:-1 group-title="地方台",三门峡新闻综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226523/1.m3u8
+#EXTINF:-1 group-title="地方台",汤阴电视台
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227372/1.m3u8
 #EXTINF:-1 group-title="地方台",卫辉综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226538/1.m3u8
 #EXTINF:-1 group-title="地方台",仙门山新闻综合
