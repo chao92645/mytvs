@@ -39,9 +39,9 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226524/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="CCTV4K" tvg-name="CCTV4K" group-title="央视",CCTV4K
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226716/1.m3u8
-#EXTINF:-1 group-title="其他",中国教育1
+#EXTINF:-1 tvg-id="中国教育1台" tvg-name="中国教育1台" group-title="其他",CETV-1
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226471/1.m3u8
-#EXTINF:-1 group-title="其他",求索记录4K
+#EXTINF:-1 tvg-id="求索记录" tvg-name="求索记录" group-title="其他",求索记录4K
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227381/1.m3u8
 #EXTINF:-1 tvg-id="SiTV东方财经" tvg-name="SiTV东方财经" group-title="其他",SiTV东方财经
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226843/1.m3u8?fmt=ts2hls
