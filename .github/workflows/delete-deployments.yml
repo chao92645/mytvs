@@ -1,0 +1,28 @@
+name: Delete All GitHub Pages Deployments
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete-deployments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete all github-pages deployments
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          # 获取所有 github-pages 环境的 deployments
+          deployments=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO/deployments?environment=github-pages" | jq '.[].id')
+
+          if [ -z "$deployments" ]; then
+            echo "No deployments found."
+            exit 0
+          fi
+
+          for id in $deployments; do
+            echo "Deleting deployment $id ..."
+            curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$REPO/deployments/$id"
+          done
