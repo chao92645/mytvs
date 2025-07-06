@@ -1,4 +1,4 @@
-name: Delete All GitHub Pages Deployments (with inactive status)
+name: Delete All GitHub Pages Deployments (force status update)
 
 on:
   workflow_dispatch:
@@ -7,13 +7,13 @@ jobs:
   delete-deployments:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete all github-pages deployments
+      - name: Fetch deployments for github-pages environment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           deployments=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/repos/$REPO/deployments?environment=github-pages" | jq '.[].id')
+            "https://api.github.com/repos/$REPO/deployments?environment=github-pages" | jq -r '.[].id')
 
           if [ -z "$deployments" ]; then
             echo "No deployments found."
@@ -22,12 +22,16 @@ jobs:
 
           for id in $deployments; do
             echo "Setting deployment $id to inactive..."
-            curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+            status=$(curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
               -H "Accept: application/vnd.github+json" \
               -d '{"state":"inactive"}' \
-              "https://api.github.com/repos/$REPO/deployments/$id/statuses"
+              "https://api.github.com/repos/$REPO/deployments/$id/statuses" | jq -r '.state')
 
-            echo "Deleting deployment $id ..."
-            curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
-              "https://api.github.com/repos/$REPO/deployments/$id"
+            if [ "$status" == "inactive" ]; then
+              echo "Deleting deployment $id ..."
+              curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
+                "https://api.github.com/repos/$REPO/deployments/$id"
+            else
+              echo "Failed to set deployment $id to inactive."
+            fi
           done
