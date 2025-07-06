@@ -1,4 +1,4 @@
-name: Delete All GitHub Pages Deployments
+name: Delete All GitHub Pages Deployments (with inactive status)
 
 on:
   workflow_dispatch:
@@ -12,7 +12,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          # 获取所有 github-pages 环境的 deployments
           deployments=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
             "https://api.github.com/repos/$REPO/deployments?environment=github-pages" | jq '.[].id')
 
@@ -22,6 +21,12 @@ jobs:
           fi
 
           for id in $deployments; do
+            echo "Setting deployment $id to inactive..."
+            curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              -d '{"state":"inactive"}' \
+              "https://api.github.com/repos/$REPO/deployments/$id/statuses"
+
             echo "Deleting deployment $id ..."
             curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" \
               "https://api.github.com/repos/$REPO/deployments/$id"
