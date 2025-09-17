@@ -39,7 +39,7 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226524/1.m3u8?fmt=ts2hl
 #EXTINF:-1,tvg-id="CCTV17" tvg-name="CCTV17" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CCTV17.png" group-title="央视",CCTV17
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226954/1.m3u8?fmt=ts2hls
 #EXTINF:-1,tvg-id="CCTV4K" tvg-name="CCTV4K" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CCTV4K.png" group-title="央视",CCTV4K
-http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226716/1.m3u8
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227413/1.m3u8?fmt=ts2hls
 
 #EXTINF:-1,tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/安徽卫视.png" group-title="卫视",安徽卫视
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226975/1.m3u8?fmt=ts2hls
@@ -117,6 +117,8 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226910/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227154/1.m3u8?fmt=ts2hls
 #EXTINF:-1,tvg-id="咪咕视频" tvg-name="咪咕视频" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/咪咕视频.png" group-title="其他",咪咕视频
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227258/1.m3u8?fmt=ts2hls
+#EXTINF:-1,tvg-id="咪咕视频" tvg-name="咪咕视频" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/咪咕视频.png" group-title="其他",咪咕视界4K
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227285/1.m3u8?fmt=ts2hls
 #EXTINF:-1,tvg-id="中华功夫" tvg-name="中华功夫" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/中华功夫.png" group-title="河南",中华功夫
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226962/1.m3u8?fmt=ts2hls
 #EXTINF:-1,tvg-id="河南曲艺" tvg-name="河南曲艺" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/河南曲艺.png" group-title="河南",河南曲艺
@@ -266,4 +268,5 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226598/1.m3u8
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226377/1.m3u8
 #EXTINF:-1,tvg-id="淅川电视台" tvg-name="淅川电视台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/淅川电视台.png" group-title="河南",淅川电视台
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226501/1.m3u8
+
 
