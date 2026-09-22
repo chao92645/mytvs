@@ -45,7 +45,7 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227413/1.m3u8?fmt=ts2hl
 #EXTINF:-1 tvg-id="中国教育1台" tvg-name="中国教育1台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CETV1.png" group-title="央视",中国教育1台
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226974/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="中国教育2台" tvg-name="中国教育2台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CETV2.png" group-title="央视",中国教育2台
-http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227329/index.m3u8
+http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227194/index.m3u8
 #EXTINF:-1 tvg-id="中国教育4台" tvg-name="中国教育4台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CETV4.png" group-title="央视",中国教育4台
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227200/index.m3u8
 
