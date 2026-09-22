@@ -143,7 +143,7 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227444/index.m3u8
 #EXTINF:-1,tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/浙江卫视4K.png" group-title="4K超高清",浙江卫视4K
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227438/index.m3u8
 
-#EXTINF:-1,tvg-id="CHC家庭影院" tvg-name="CHC家庭影院" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CHC家庭影院.png" group-title="数字付费",CHC家庭影院
+#EXTINF:-1,tvg-id="CHC家庭电影" tvg-name="CHC家庭电影" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CHC家庭影院.png" group-title="数字付费",CHC家庭影院
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227477/index.m3u8
 #EXTINF:-1,tvg-id="CHC动作电影" tvg-name="CHC动作电影" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/CHC动作电影.png" group-title="数字付费",CHC动作电影
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227479/index.m3u8
