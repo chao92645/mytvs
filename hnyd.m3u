@@ -242,7 +242,7 @@ http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227003/1.m3u8?fmt=ts2hl
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227380/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="内黄综合" tvg-name="内黄综合" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/内黄.png" group-title="河南地方",内黄综合
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221226356/1.m3u8
-#EXTINF:-1 tvg-id="汤阴电视台" tvg-name="汤阴电视台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/汤阴.png" group-title="河南地方",汤阴电视台
+#EXTINF:-1 tvg-id="汤阴电视台" tvg-name="汤阴电视台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/汤阴综合.png" group-title="河南地方",汤阴电视台
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227378/1.m3u8?fmt=ts2hls
 #EXTINF:-1 tvg-id="滑县电视台" tvg-name="滑县电视台" tvg-logo="https://cdn.gh-proxy.com/https://raw.githubusercontent.com/chao92645/live/refs/heads/main/tv/滑县电视台.png" group-title="河南地方",滑县电视台
 http://iptv.cdn.ha.chinamobile.com/PLTV/88888888/224/3221227227/1.m3u8?fmt=ts2hls
