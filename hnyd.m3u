@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://epg.pw/xmltv/epg_CN.xml.gz"
+#EXTM3U x-tvg-url="https://gitee.com/taksssss/tv/raw/main/epg/51zmt.xml.gz"
 #EXT-X-APP APTV
 #EXT-X-APTV-TYPE remote
 #EXT-X-SUB-URL https://v4.gh-proxy.org/https://raw.githubusercontent.com/chao92645/mytvs/refs/heads/main/hnyd.m3u
