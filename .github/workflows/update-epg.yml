@@ -1,0 +1,46 @@
+name: 每日合并 EPG
+
+# 每天北京时间 05:00（UTC 21:00）自动合并，改 m3u 时也会立即跑一次
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  push:
+    paths:
+      - 'hnyd.m3u'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: merge-epg
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 合并 EPG
+        run: python scripts/merge_epg.py
+
+      - name: 提交结果
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add epg/merged.xml
+          if git diff --staged --quiet; then
+            echo "内容无变化，跳过提交"
+          else
+            git commit -m "chore: 更新 EPG $(date -u +%Y-%m-%d)"
+            git push
+          fi
