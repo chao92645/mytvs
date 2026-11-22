@@ -16,14 +16,16 @@ EPG 自动合并器（纯源头版）
     不会出现「主源命中但内容为空、备源被挡住」的情况
   · 输出时把 <channel id> 与 <programme channel> 统一改写成 tvg-id
     => 播放器按 tvg-id 直查即可命中，不再依赖 display-name 回退匹配
-  · 只保留最近 KEEP_DAYS 天（含当天）
+  · 时间窗口：今天往前 KEEP_PAST 天 ~ 今天往后 KEEP_FUTURE 天
+    往前那段是给「回看」用的（播放器要从节目单上点到过去的节目）
 
 运行环境：GitHub Actions (ubuntu) 或本地 Windows，仅需标准库。
 环境变量：
-  M3U_PATH   播放列表路径，默认 hnyd.m3u
-  OUT_PATH   输出路径，默认 epg/merged.xml
-  KEEP_DAYS  保留天数，默认 3
-  MIN_PROG   节目条数下限，低于此值视为数据源异常、放弃写入，默认 2000
+  M3U_PATH     播放列表路径，默认 hnyd.m3u
+  OUT_PATH     输出路径，默认 epg/merged.xml
+  KEEP_PAST    保留过去几天（含内容），默认 3
+  KEEP_FUTURE  保留未来几天，默认 3
+  MIN_PROG     节目条数下限，低于此值视为数据源异常、放弃写入，默认 6000
 """
 import copy
 import gzip
@@ -183,8 +185,9 @@ def stitch(items, lo, hi):
 def main():
     m3u_path = os.environ.get("M3U_PATH", "hnyd.m3u")
     out_path = os.environ.get("OUT_PATH", os.path.join("epg", "merged.xml"))
-    keep_days = int(os.environ.get("KEEP_DAYS", "3"))
-    min_prog = int(os.environ.get("MIN_PROG", "2000"))
+    keep_past = int(os.environ.get("KEEP_PAST", "3"))
+    keep_future = int(os.environ.get("KEEP_FUTURE", "3"))
+    min_prog = int(os.environ.get("MIN_PROG", "6000"))
 
     if not os.path.exists(m3u_path):
         print(f"! 找不到播放列表 {m3u_path}，当前目录: {os.getcwd()}")
@@ -237,8 +240,10 @@ def main():
 
     print("[3/4] 拼接时间线 ...")
     now = datetime.now(CN_TZ)
-    lo = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    hi = lo + timedelta(days=keep_days)
+    today = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    lo = today - timedelta(days=keep_past)
+    hi = today + timedelta(days=keep_future)
+    print(f"  窗口 {lo:%m-%d %H:%M} ~ {hi:%m-%d %H:%M}（回看 {keep_past} 天 + 未来 {keep_future} 天）")
 
     out_ch, out_pg = [], []
     used = {}          # canon -> 用到的源标签集合
