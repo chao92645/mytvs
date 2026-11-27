@@ -10,8 +10,9 @@ EPG 自动合并器（纯源头版）
 做法：
   · 读 hnyd.m3u，建立「各种频道写法 -> 规范 tvg-id」映射
   · 逐源抓取，只保留 m3u 里真实存在的频道
-  · 【时区归一】两源时区标注不同（kuke31 给 +0800，epg.pw 给 +0000），
-    统一解析成北京时间再比较、再输出，全部写成 +0800
+  · 【时间解析】两源时区标注都不可信（kuke31 标 +0800 正确，epg.pw 标 +0000
+    但数字其实是北京时间），一律取前 14 位数字当北京时间，忽略偏移标记；
+    输出统一写 +0800
   · 【时段拼接】主源先占时间段，备源只填主源的空档；
     不会出现「主源命中但内容为空、备源被挡住」的情况
   · 输出时把 <channel id> 与 <programme channel> 统一改写成 tvg-id
@@ -115,22 +116,23 @@ def load_m3u(path):
 def parse_sdt(s):
     """把 '20261123000000 +0800' / '20261123000000 +0000' 解析成北京时间 datetime
 
-    无偏移标注的一律按北京时间处理（xmltv 默认使用本地时区）。
+    【关键】两个源的时区标注都不可信，一律取前 14 位数字，直接当北京时间：
+      · kuke31 标 +0800，数字本身就是北京时间  —— 一致
+      · epg.pw 标 +0000，但数字其实也是北京时间 —— 标注是错的
+        实测佐证：epg.pw 的 07:40《盛夏未来》与 kuke31 的 07:40《盛夏未来》
+        完全吻合；epg.pw 的 07:01《看东方》(东方卫视早间节目)、07:00 国歌、
+        06:00《朝闻天下》也都落在正确的早间时段。
+      若按标注 +0000 加 8 小时，epg.pw 全部节目会整体推后 8 小时（曾导致
+      下午时段显示早间节目内容），所以偏移标记直接忽略。
     """
-    m = re.match(r"(\d{14})\s*([+-]\d{4})?", (s or "").strip())
+    m = re.match(r"(\d{14})", (s or "").strip())
     if not m:
         return None
     try:
         dt = datetime.strptime(m.group(1), "%Y%m%d%H%M%S")
     except ValueError:
         return None
-    off = m.group(2)
-    if off:
-        sign = 1 if off[0] == "+" else -1
-        tz = timezone(sign * timedelta(hours=int(off[1:3]), minutes=int(off[3:5])))
-    else:
-        tz = CN_TZ
-    return dt.replace(tzinfo=tz).astimezone(CN_TZ)
+    return dt.replace(tzinfo=CN_TZ)
 
 
 def fmt_dt(dt):
